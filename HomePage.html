@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>L e a f - S M S</title>
+
+    <!-- Title logo link  -->
+    <link rel="shortcut icon" sizes="32x32" href="./images/leaf.jpg" type="image/x-icon" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header section Starts  -->
+
+    <header>
+
+        <a href="#" class="logo"> <i class="fab fa-canadian-maple-leaf"></i> <span>L</span>eaf... </a>
+
+
+        <a class="btn-main" href="./home.html"> <span class="fas fa-home"></span> Home Page</a>
+
+    </header>
+
+    <!-- Header section Ends  -->
+
+    <!-- Home section starts  -->
+
+    <div class="home">
+        <div class="content">
+            <h3 class="main"> S<span>tudent</span> M<span>anagement</span> S<span>ystem</span></h3><br>
+            <p class="sub">We Understand Your Dream And Work On It Like Our Own Dream</p><br><br>
+            <div class="btn-content">
+                <a class="btn" href="./StudentLogin.html"> <span class="fas fa-user"></span>&numsp; Student Login</a>
+                <a class="btn" href="./AdminLogin.html"> <span class="fas fa-user"></span>&numsp; Admin Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home section ends  -->
+
+</body>
+
+<style>
+    /*--------------------------------
+    Overall Style section starts here
+    ---------------------------------  */
+
+    * {
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all .2s linear;
+        overflow: hidden;
+    }
+
+    html {
+        font-size: 55%;
+        max-zoom: 90%;
+        overflow: hidden;
+    }
+
+    /* Overall Style section ends here  */
+
+    /*--------------------------------
+    Overall header section starts here
+    ---------------------------------  */
+
+    header {
+        padding: 2rem 9%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1.5rem #0000001a;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+    }
+
+    header .logo {
+        font-size: 5rem;
+        color: whitesmoke;
+    }
+
+    header .logo span {
+        font-size: 5rem;
+        color: rgb(146, 255, 210);
+    }
+
+    header .logo i {
+        color: #16a085;
+    }
+
+    /* Overall header section starts here  */
+
+    /*-----------------------
+    home section starts here
+    -------------------------*/
+
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: url(./images/img-2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content .main {
+        font-size: 6rem;
+        font-family: serif;
+        font-weight: bolder;
+        color: #16a085;
+    }
+
+    .home .content .main span {
+        font-size: 6rem;
+        font-family: serif;
+        font-weight: bolder;
+        color: whitesmoke;
+    }
+
+    .home .content .sub {
+        font-size: 3rem;
+        color: rgb(146, 255, 210);
+        padding: .5rem 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* home section ends here  */
+
+    /*--------------------------------
+    button section starts here
+    ---------------------------------  */
+
+    .btn-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        gap: 1rem;
+        transform: translateX(25%);
+    }
+
+    .btn {
+        font-size: 2rem;
+        font-weight: bolder;
+        padding: 20px 45px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        display: inline-flex;
+        margin-top: 1rem;
+        width: fit-content;
+        border: .2rem solid #16a085;
+        border-radius: .5rem;
+        box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+        color: #16a085;
+        background: #fff;
+    }
+
+    .btn:hover {
+        background-color: #16a085;
+        animation: align 0.5s infinite;
+        box-shadow: 0 0 35px #00ff80;
+        color: white;
+    }
+
+    .btn-main {
+        text-decoration: none;
+        font-size: 2.5rem;
+        background-color: rgb(144, 238, 225);
+        color: black;
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+
+    .btn-main:hover {
+        color: rgb(255, 102, 0);
+        background-image: linear-gradient(to right, #00ffaa, #00ff80, #22ff52ef);
+        animation: align 0.3s infinite;
+        box-shadow: 0 0 35px #19c7f3;
+    }
+
+    @keyframes align {
+        0% {
+            border: 1px solid #ff0000;
+        }
+
+        25% {
+            border: 1px solid springgreen;
+        }
+
+        50% {
+            border: 1px solid rgb(9, 144, 255);
+        }
+
+        75% {
+            border: 1px solid rgb(251, 255, 9);
+        }
+
+        100% {
+            border: 1px solid orangered;
+        }
+    }
+
+    /* button section ends here  */
+
+    /* Responsive section starts here  */
+
+    @media (max-width:960px) {
+        .home .content .main {
+            font-size: 4rem;
+        }
+
+        .home .content .main span {
+            font-size: 4rem;
+        }
+
+        .home .content .sub {
+            font-size: 2rem;
+        }
+
+        .btn {
+            font-size: 1.7rem;
+            padding: 10px 20px;
+        }
+
+        .btn-content {
+            transform: translateX(17%);
+        }
+    }
+
+    @media (max-width:540px) {
+        .btn-content {
+            display: flex;
+            flex-direction: column;
+            transform: translateX(35%);
+        }
+
+        .btn-content .btn {
+            margin: 10px;
+            width: 40%;
+        }
+    }
+
+    @media (max-width:500px) {
+        .btn-main {
+            text-decoration: none;
+            font-size: 2.5rem;
+            background-color: rgb(144, 238, 225);
+            color: black;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .home .content .main span {
+            visibility: hidden;
+            display: none;
+        }
+
+        .home .content .sub {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .btn-main {
+            font-size: 2rem;
+            padding: 5px 15x;
+        }
+
+        .btn-content .btn {
+            font-size: 1.5rem;
+            padding: 10px 19px;
+        }
+    }
+
+    @media (max-width:415px) {
+
+        .btn-main {
+            font-size: 1rem;
+            padding: 3px 8x;
+        }
+
+        header .logo {
+            font-size: 3rem;
+        }
+
+        header .logo span {
+            font-size: 3rem;
+        }
+
+        header .logo i {
+            font-size: 4rem;
+        }
+
+        .btn-content {
+            transform: translateX(25%);
+        }
+
+        .btn-content .btn {
+            width: 55%;
+        }
+    }
+
+    @media (max-width:360px) {
+
+        .home .content .main {
+            font-size: 6rem;
+            ;
+        }
+
+        .home .content .sub {
+            font-size: 1.3rem;
+            ;
+        }
+
+        header .logo {
+            font-size: 2rem;
+        }
+
+        header .logo span {
+            font-size: 2rem;
+        }
+
+        header .logo i {
+            font-size: 3rem;
+        }
+
+        .btn-content {
+            transform: translateX(15%);
+        }
+
+        .btn-content .btn {
+            margin: 10px;
+            width: 55%;
+        }
+
+        .btn-main {
+            font-size: 1rem;
+            padding: 3px 8px;
+        }
+
+        .btn-content .btn {
+            margin: 10px;
+            width: 70%;
+        }
+    }
+
+        /* Responsive section ends here  */
+
+</style>
+
+</html>

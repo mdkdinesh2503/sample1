@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title logo link  -->
+    <link rel="shortcut icon" sizes="32x32" href="./images/leaf.jpg" type="image/x-icon" />
+
+    <title>L e a f - L o g i n (A)</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Header section Starts  -->
+
+    <header>
+
+        <a href="#" class="logo"> <i class="fab fa-canadian-maple-leaf"></i> L<span>eaf...</span> </a>
+
+        <nav class="navbar">
+            <a href="HomePage.html"><span class="fas fa-home"></span> Home</a>
+        </nav>
+
+    </header>
+
+    <!-- Header section Ends  -->
+
+    <!-- Login form section starts  -->
+    <div class="container">
+        <div class="login-content">
+            <form action="">
+                <a href=""><img src="./images/avatar2.png"></a>
+                <h2 class="title">Admin sign-in</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-spin fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" autocomplete="off" id="UserName" name="UserName" placeholder="Username"
+                            class="input" />
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-spin fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" id="Password" name="Password" placeholder="Password " class="input" />
+                    </div>
+                </div>
+                <a class="forgotpass" href="#">Forgot Password?</a>
+                <input type="button" id="submit" onclick="validate()" class="btn" value="Login" />
+            </form>
+        </div>
+    </div>
+    <!-- login form section ends  -->
+
+</body>
+
+<script>
+
+    // Javascript validation form submit button starts here
+    var attempt = 3;
+    function validate() {
+
+        var UserName = document.getElementById("UserName").value;
+        var Password = document.getElementById("Password").value;
+
+        if (UserName == "Dk" && Password == "Dk@123") {
+
+            alert("Login Successfully...");
+            window.location = "AdminSide.html";
+            return false;
+
+        }
+        else {
+
+            attempt--;
+            alert("Invalid Crendentials\r\n" + "\tYou have only " + attempt + " attempt left!!!;");
+
+            if (attempt == 0) {
+
+                document.getElementById("UserName").disabled = true;
+                document.getElementById("Password").disabled = true;
+                document.getElementById("submit").disabled = true;
+                return false;
+
+            }
+        }
+    }
+    // Javascript validation form submit button ends here
+
+</script>
+
+<style>
+    /*--------------------------------
+    Overall Style section starts here
+    ---------------------------------  */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        min-height: 100vh;
+        background-image: url(./images/img-2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    html {
+        font-size: 65%;
+        max-width: 95%;
+    }
+
+    /* Overall Style section ends here  */
+
+    /*--------------------------------
+    Login form section starts here
+    ---------------------------------  */
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    form {
+        width: 420px;
+    }
+
+    .login-content img {
+        height: 150px;
+        border-radius: 100%;
+    }
+
+    .login-content .title {
+        margin: 15px 0;
+        color: #16a085;
+        text-transform: uppercase;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 400;
+        font-size: 4rem;
+    }
+
+    .login-content .input-div {
+        position: relative;
+        display: grid;
+        grid-template-columns: 7% 93%;
+        margin: 25px 0;
+        padding: 5px 0;
+        border-bottom: 2px solid #fff;
+    }
+
+    .login-content .input-div:hover {
+        border-bottom: 2px solid rgb(0, 255, 221);
+        transition: .3s;
+        transform-origin: right;
+    }
+
+    .i {
+        color: rgb(5, 255, 109);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-div div {
+        position: relative;
+        height: 45px;
+    }
+
+    ::placeholder {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: whitesmoke;
+        font-size: 20px;
+        transition: .3s;
+    }
+
+    .input-div div input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.5rem 0.7rem;
+        font-size: 25px;
+        font-weight: 300;
+        color: white;
+        font-family: 'poppins', sans-serif;
+    }
+
+    .login-content .input-div.one {
+        margin-top: 0;
+    }
+
+    .login-content .input-div.pass {
+        margin-bottom: 4px;
+    }
+
+    .forgotpass {
+        display: block;
+        width: fit-content;
+        float: right;
+        text-decoration: none;
+        color: whitesmoke;
+        margin: 10px;
+        font-size: 1.3rem;
+        transition: .3s;
+    }
+
+    .forgotpass:hover {
+        color: #38d39f;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        font-size: 1.2rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: .5s;
+        background-size: 200%;
+    }
+
+    .btn:hover {
+        background-position: right;
+    }
+
+    /* Login form section ends here  */
+
+    /*--------------------------------
+    Overall header section starts here
+    ---------------------------------  */
+
+    header {
+        padding: 2rem 9%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        box-shadow: 0 .5rem 1.5rem #0000001a;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+    }
+
+    header .logo {
+        font-size: 4rem;
+        color: #38d39f;
+        text-decoration: none;
+    }
+
+    header .navbar span {
+        color: #16a085;
+    }
+
+    header .logo span {
+        color: #fff;
+    }
+
+    header .logo i {
+        color: #16a085;
+    }
+
+    header .navbar a {
+        font-size: 3.5rem;
+        text-transform: capitalize;
+        color: #fff;
+        margin-left: 2rem;
+        text-decoration: none;
+    }
+
+    header .navbar a:hover {
+        color: #16a085;
+    }
+
+    header .navbar a:hover span {
+        color: #fff;
+    }
+
+    @media screen and (max-width :600px) {
+        header .logo {
+            font-size: 2.4rem;
+        }
+
+        header .logo i {
+            font-size: 3rem;
+        }
+
+        header .navbar a {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width :265px) {
+        header .logo {
+            font-size: 2rem;
+        }
+
+        header .logo i {
+            font-size: 2.5rem;
+        }
+
+        header .navbar a {
+            font-size: 1.7rem;
+        }
+    }
+
+    @media screen and (max-width :232px) {
+        header .logo span {
+            visibility: hidden;
+            display: none;
+        }
+
+    }
+
+    /* Overall header section starts here  */
+
+    /* Responsive section starts here  */
+
+    @media (max-width:1300px) {
+
+        .login-content img {
+            height: 100px;
+        }
+
+        .login-content .title {
+            font-size: 2.4rem;
+        }
+
+        form {
+            width: 300px;
+        }
+
+        ::placeholder {
+            font-size: 14px;
+        }
+
+        .input-div div input {
+            font-size: 19px;
+        }
+
+        .login-content .input-div {
+            margin: 10px 0;
+        }
+
+        .forgotpass {
+            font-size: 1rem;
+        }
+
+        .btn {
+            height: 40px;
+            font-size: 1.5rem;
+        }
+
+    }
+
+
+    @media screen and (max-width: 300px) {
+        .login-content img {
+            height: 90px;
+        }
+
+        .login-content .title {
+            font-size: 2rem;
+        }
+
+        ::placeholder {
+            font-size: 12px;
+        }
+
+        .input-div div input {
+            font-size: 14px;
+        }
+
+        .forgotpass {
+            font-size: .8rem;
+        }
+
+        .btn {
+            height: 30px;
+            font-size: 1rem;
+        }
+
+        .login-content .input-div {
+            margin: 8px 0;
+        }
+
+    }
+
+    /* Responsive section ends here  */
+</style>
+
+</html>

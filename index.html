@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>S M S - P r o j e c t</title>
+
+    <!-- Title logo link  -->
+    <link rel="shortcut icon" sizes="32x32" href="./images/sms-logo-2.jpg" type="image/x-icon" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="div">
+            <div class="div-1">
+                <h1>Student management system</h1>
+            </div>
+            <div class="div-2">
+                <div class="set-1">
+                    <li>
+                        <p>Step - 1 :<span>Go To College Page</span></p>
+                    </li>
+                    <li>
+                        <p>Step - 2 :<span>Sign-In</span></p>
+                    </li>
+                    <li>
+                        <p>Step - 3 :<span>Choose Admin/Student</span></p>
+                    </li>
+                    <li>
+                        <p>Step - 4 :<span>Enjoy By Using Website</span></p>
+                    </li>
+                </div>
+                <div class="set-2">
+                    <a href="./home.html" class="btn">Click Here to go....</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<style>
+    * {
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all .2s linear;
+        overflow: hidden;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 7rem;
+        scroll-behavior: smooth;
+    }
+
+    html::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    html::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background: #16a085;
+    }
+
+    .container {
+        height: 100vh;
+        padding: 2rem 9%;
+        display: flex;
+        flex-direction: column;
+        background-image: url(./images/main-page-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container .div .div-1 h1 {
+        font-size: 7rem;
+        text-transform: capitalize;
+        font-family: Calisto MT;
+        font-weight: 600;
+        animation: design 1.5s infinite;
+    }
+
+    @keyframes design {
+        0% {
+            text-shadow: .4rem .4rem 0 rgb(6, 255, 6);
+        }
+
+        25% {
+            text-shadow: .4rem .4rem 0 rgb(243, 37, 30);
+        }
+
+        50% {
+            text-shadow: .4rem .4rem 0 rgb(21, 217, 252);
+        }
+
+        75% {
+            text-shadow: .4rem .4rem 0 rgb(198, 39, 238);
+        }
+
+        100% {
+            text-shadow: .4rem .4rem 0 rgb(247, 93, 4);
+        }
+    }
+
+    .container .div {
+        transform: translateY(25%);
+        margin-top: 3rem;
+    }
+
+    .container .div .div-2 {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container .div .div-2 .set-1 {
+        margin-top: 3rem;
+    }
+
+    .container .div .div-2 .set-1 li {
+        list-style: none;
+        padding: 1rem;
+    }
+
+    .container .div .div-2 .set-1 p {
+        font-size: 4rem;
+        font-family: Garamond;
+        font-weight: 900;
+    }
+
+    .container .div .div-2 .set-1 p span {
+        font-size: 3rem;
+        margin-left: 10%;
+        font-family: Garamond;
+        font-weight: 600;
+    }
+
+    .container .div .div-2 .set-2 .btn {
+        display: inline-flex;
+        transform: translateX(30%);
+        margin-top: 10rem;
+        width: fit-content;
+        padding: 2rem 3rem;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #16a085;
+        text-transform: capitalize;
+        background-color: #fff;
+        animation: align 0.3s infinite;
+        border-radius: .5rem;
+        box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    }
+
+    @keyframes align {
+        0% {
+            border: 1px solid #ff0000;
+        }
+
+        25% {
+            border: 1px solid springgreen;
+        }
+
+        50% {
+            border: 1px solid rgb(9, 144, 255);
+        }
+
+        75% {
+            border: 1px solid rgb(251, 255, 9);
+        }
+
+        100% {
+            border: 1px solid orangered;
+        }
+    }
+
+    .container .div .div-2 .set-2 .btn:hover {
+        color: #fff;
+        background-color: #16a085;
+    }
+
+    @media (max-width : 1300px) {
+        .container .div .div-1 h1 {
+            font-size: 5rem;
+        }
+
+        .container .div .div-2 .set-1 p {
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        .container .div .div-2 .set-1 p span {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width : 860px) {
+        .container .div .div-2 .set-2 .btn {
+            transform: translateX(30%);
+            margin-top: 7rem;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+        }
+
+        .container .div .div-2 {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container .div .div-1 h1 {
+            font-size: 4rem;
+        }
+        .container .div{
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width : 460px) {
+        .container .div .div-1 h1 {
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        .container .div .div-2 .set-1 p {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .container .div .div-2 .set-1 p span {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+</style>
+
+</html>
